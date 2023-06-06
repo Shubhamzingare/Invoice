@@ -11,45 +11,70 @@
                 align-items: center;
                 height: 100vh;
          }
+         .container {
+          position: relative;
+          width: 900px; /* Adjust the width as needed */
+          margin-left: 50%; /* Center the container horizontally */
+          margin-right: 50%;
+        }
          table {
                 border-collapse: collapse;
                 align-self: center;
-        }
-  
+
+         }
+
          table, th, td {
-   
-                table-layout: fixed; 
+
+                table-layout: fixed;
                 border: 1px solid black;
+        }
+        th{
+          border-top:none;
+          border-right: none;
         }
        td{
                 padding-left: 10px;
                 padding-right: 60px;
                 white-space: nowrap; overflow: hidden;
-                vertical-align: top; 
-   
+                vertical-align: top;
+
          }
         .Brand
         {
                 text-align: left;
-                vertical-align: top; 
+                vertical-align: top;
                 margin-top: 1px;
                 margin-bottom: 5px;
-      }
+        }
         span.label1 {
                 display: inline-block;
                 text-align: right;
                 margin-right: 45px; /* Adjust the margin as needed */
         }
-            span.label2 {
+        span.label2 {
                 display: inline-block;
                 text-align: right;
                 margin-right: 52px; /* Adjust the margin as needed */
          }
- 
+         .tdborder td{
+          border-bottom: none;
+          border-right: none;
+          padding: 20px;
+         }
+         .cgstTd td{
+          border-top:none;
+          padding-top: 0;
+          padding-bottom: 0;
+         }
+         .sgstTd td{
+          border-top:none;
+          padding-bottom: 100px;
+          
+         }
     </style>
 </head>
 <body>
-    <div class="table-container">
+    <div class="container">
     <table>
         <caption style="padding-bottom: 15px; font-size: 25px;"><b>Tax Invoice</b></caption>
         <tr>
@@ -115,109 +140,167 @@
                 </p>
             </td>
         </tr>
+        <tr>
+
+        </tr>
 
 <!-- *************************************************** -->
-<tr>
-    <td rowspan="5" class="Brand">
-      <p style="font-size: 18px; line-height: 1.2;margin-top: 5px;">
-        Consignee (Ship to)<br>
-          <b>S Agrawal</b><br>
-          21 A Building<br>
-          21 Indian Corporation Complex<br>
-          Dapoda Bhiwandi -421302<br>
-          <span class="label1">GSTIN/UIN</span>: 27AAACX2263R1ZR<br>
-          <span class="label2">State Name</span>: Maharashtra, Code: 27
-      </p>
-    </td>
-  </tr>
-  <tr >
-    <td>
-      <p class="Brand">
-        Buyer’s Order No.<br>
-          <b>
-              20230705/CIN/315
-          </b>
-      </p>
-    </td>
-    <td>
-      <p class="Brand">
-      Dated<br>
-      <b>
-          18-May-23
-      </b>
-    </p>
-    </td>
-  </tr>
-  <tr>
-    <td >
-      <p class="Brand">
-        Dispatch Doc No.<br>
-          <b>
-              20230705/CIN/315
-          </b>
-      </p>
-    </td>
-    <td >
-      <p class="Brand">
-        Delivery Note Date<br>
-          <b>
-            18-May-23
-          </b>
-      </p>
-    </td>
-  </tr>
-  <tr>
-      <td>
-          <p class="Brand">
-            Dispatched through<br>
-            <b>
-              Delivery
-            </b>
-          </p>
-      </td>
-      <td>
-          <p class="Brand"> 
-            Destination<br>
-            <b>
-              Nagpur
-            </b>
-          </p>
-      </td>
-  </tr>
-<tr>
-  <td colspan="2" rowspan="2">
-    <P style=" text-align: left;
-    vertical-align: top; margin-top: 5px;">
-      Terms of Delivery<br><br>
-      <span style="display: block; width: 300px;">
-        We deliver the product where our third party partner available.<br> 
-        Our delivery partner is <b>Delivery</b>.<br>
-          You can google it if it's available in your area. 
+        <tr>
+            <td rowspan="5" class="Brand">
+              <p style="font-size: 18px; line-height: 1.2;margin-top: 5px;">
+                Consignee (Ship to)<br>
+                  <b>S Agrawal</b><br>
+                  21 A Building<br>
+                  21 Indian Corporation Complex<br>
+                  Dapoda Bhiwandi -421302<br>
+                  <span class="label1">GSTIN/UIN</span>: 27AAACX2263R1ZR<br>
+                  <span class="label2">State Name</span>: Maharashtra, Code: 27
+              </p>
+            </td>
+          </tr>
+          <tr >
+            <td>
+              <p class="Brand">
+                Buyer’s Order No.<br>
+                  <b>
+                      20230705/CIN/315
+                  </b>
+              </p>
+            </td>
+            <td>
+              <p class="Brand">
+              Dated<br>
+              <b>
+                  18-May-23
+              </b>
+            </p>
+            </td>
+          </tr>
+          <tr>
+            <td >
+              <p class="Brand">
+                Dispatch Doc No.<br>
+                  <b>
+                      20230705/CIN/315
+                  </b>
+              </p>
+            </td>
+            <td >
+              <p class="Brand">
+                Delivery Note Date<br>
+                  <b>
+                    18-May-23
+                  </b>
+              </p>
+            </td>
+          </tr>
+          <tr>
+              <td>
+                  <p class="Brand">
+                    Dispatched through<br>
+                    <b>
+                      Delivery
+                    </b>
+                  </p>
+              </td>
+              <td>
+                  <p class="Brand">
+                    Destination<br>
+                    <b>
+                      Nagpur
+                    </b>
+                  </p>
+              </td>
+          </tr>
+        <tr>
+          <td colspan="2" rowspan="2">
+            <P style=" text-align: left;
+            vertical-align: top; margin-top: 5px;">
+              Terms of Delivery<br><br>
+              <span style="display: block; width: 300px;">
+                We deliver the product where our third party partner available.<br>
+                Our delivery partner is <b>Delivery</b>.<br>
+                  You can google it if it's available in your area.
 
-      </span>
-    </P>
-  </td>
-</tr>
+              </span>
+            </P>
+          </td>
+        </tr>
 <!-- ************************************************************** -->
 
-<tr>
-  <td class="Brand">
-    <p style="font-size: 18px; line-height: 1.2;margin-top: 5px;">
-      Buyer (Bill to)<br>
-        <b>S Agrawal</b><br>
-        21 A Building<br>
-        21 Indian Corporation Complex<br>
-        Dapoda Bhiwandi -421302<br>
-        <span class="label1">GSTIN/UIN</span>: 27AAACX2263R1ZR<br>
-        <span class="label2">State Name</span>: Maharashtra, Code: 27
-    </p>
-  </td>
-  
-</tr>
-<!-- <tr>
-  
-</tr> -->
-      </table>
+        <tr>
+          <td class="Brand">
+            <p style="font-size: 18px; line-height: 1.2;margin-top: 5px;">
+              Buyer (Bill to)<br>
+                <b>S Agrawal</b><br>
+                21 A Building<br>
+                21 Indian Corporation Complex<br>
+                Dapoda Bhiwandi -421302<br>
+                <span class="label1">GSTIN/UIN</span>: 27AAACX2263R1ZR<br>
+                <span class="label2">State Name</span>: Maharashtra, Code: 27
+            </p>
+          </td>
+
+        </tr>
+
+<!-- ********************************************************************* -->
+        <tr>
+          <td colspan="3" class="tdborder" style="padding: 0;">
+              <table style=" width: 100%; border: none;">
+                      <tr>
+                        <th style="width: 3%;border-left:none">Sr<br>No.</th>
+                        <th style="width: 43%;">Description of<br>Services</th>
+                        <th>HSN/SAC</th>
+                        <th >Quantity</th>
+                        <th>Rate</th>
+                        <th style="width: 5%;">per</th>
+                        <th style="width: 15%;">Amount</th>
+                      </tr>
+                      <tr >
+                        <td style="border-left:none" rowspan="6">1</td>
+                        <td>
+                          <b>1 YEAR YOGA EVERYDAY</b>
+                        </td>
+                        <td rowspan="1">999723</td>
+                        <td >
+                          <b>1 NO</b>
+                        </td>
+                        <td >2,117.79</td>
+                        <td >NO</td>
+                        <td style="text-align:right">
+                          <b>2,117.79</b>
+                        </td>
+                      </tr>
+
+<!-- ****************************************                      -->
+                      <tr class="cgstTd">
+                        <td style="text-align:right">
+                          <b><i>CGST 9%</i></b>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td style="text-align:right">
+                          <b>190.60</b>
+                        </td>
+                      </tr>
+                      <tr class="sgstTd">
+                        <td style="text-align:right">
+                          <b><i>SGST 9%</i></b>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td style="text-align:right">
+                          <b>190.60</b>
+                        </td>
+                      </tr>
+                    </table>
+                    </td>
+                  </tr>
+              </table>
     </div>
 </body>
 </html>
