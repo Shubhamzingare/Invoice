@@ -10,12 +10,15 @@
                 justify-content: center;
                 align-items: center;
                 height: 100vh;
+                margin:200px 200px;
          }
          .container {
           position: relative;
-          width: 900px; /* Adjust the width as needed */
-          margin-left: 50%; /* Center the container horizontally */
-          margin-right: 50%;
+          width: 900px;
+          margin-top:30%;
+          margin-bottom:20%;
+          margin-left: 20%;
+          margin-right: 20%;
         }
          table {
                 border-collapse: collapse;
@@ -68,15 +71,19 @@
          }
          .sgstTd td{
           border-top:none;
-          padding-bottom: 100px;
-          
+          padding-top: -2px;
+          padding-bottom: 80px;
          }
+         .caption-top,.caption-bottom {
+        text-align: center;
+      
+        }
     </style>
 </head>
 <body>
     <div class="container">
     <table>
-        <caption style="padding-bottom: 15px; font-size: 25px;"><b>Tax Invoice</b></caption>
+        <caption class="caption-top;"style="padding-bottom: 15px; font-size: 25px;"><b>Tax Invoice</b></caption>
         <tr>
           <td rowspan="4" class="Brand">
             <p style="font-size: 18px; line-height: 1.5;margin-top: 5px;">
@@ -248,8 +255,8 @@
           <td colspan="3" class="tdborder" style="padding: 0;">
               <table style=" width: 100%; border: none;">
                       <tr>
-                        <th style="width: 3%;border-left:none">Sr<br>No.</th>
-                        <th style="width: 43%;">Description of<br>Services</th>
+                        <th style="width: 4%;border-left:none">Sr<br>No.</th>
+                        <th style="width: 42%;">Description of<br>Services</th>
                         <th>HSN/SAC</th>
                         <th >Quantity</th>
                         <th>Rate</th>
@@ -257,12 +264,14 @@
                         <th style="width: 15%;">Amount</th>
                       </tr>
                       <tr >
-                        <td style="border-left:none" rowspan="6">1</td>
+                        <td style="border-left:none;text-align: center; vertical-align:top; padding:22px 0px 15px 0px;" rowspan="6">
+                          <b>1</b>
+                        </td>
                         <td>
                           <b>1 YEAR YOGA EVERYDAY</b>
                         </td>
                         <td rowspan="1">999723</td>
-                        <td >
+                        <td>
                           <b>1 NO</b>
                         </td>
                         <td >2,117.79</td>
@@ -299,8 +308,20 @@
                       </tr>
                     </table>
                     </td>
-                  </tr>
-              </table>
+        </tr>
+        
+        <!-- ********************************** -->
+      <tr>
+        <td colspan="7" style="text-align: right;padding:100px; vertical-align: top;">
+        
+        <p style="margin-top: -70px;">continued ...</p>
+      </td>
+      </tr>
+      </table>
+      
+      <p style="text-align: center;line-height: 1.8;">
+        SUBJECT TO NAGPUR JURISDICTION<br>
+        This is a Computer Generated Invoice</p>
     </div>
 </body>
 </html>
