@@ -6,58 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
           body {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 100vh;
-                margin:200px 200px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          margin-top: 10px;
          }
          .container {
           position: relative;
           width: 900px;
-          margin-top:30%;
-          margin-bottom:20%;
-          margin-left: 20%;
-          margin-right: 20%;
+          margin-top: 20px;
+          padding-top: 20%;
         }
          table {
-                border-collapse: collapse;
-                align-self: center;
+          border-collapse: collapse;
+          align-self: center;
 
          }
 
          table, th, td {
 
-                table-layout: fixed;
-                border: 1px solid black;
-        }
+          table-layout: fixed;
+          border: 1px solid black;
+         }
         th{
           border-top:none;
           border-right: none;
         }
        td{
-                padding-left: 10px;
-                padding-right: 60px;
-                white-space: nowrap; overflow: hidden;
-                vertical-align: top;
+          padding-left: 10px;
+          padding-right: 60px;
+          white-space: nowrap; overflow: hidden;
+          vertical-align: top;
 
          }
         .Brand
         {
-                text-align: left;
-                vertical-align: top;
-                margin-top: 1px;
-                margin-bottom: 5px;
+          text-align: left;
+          vertical-align: top;
+          margin-top: 1px;
+          margin-bottom: 5px;
         }
         span.label1 {
-                display: inline-block;
-                text-align: right;
-                margin-right: 45px; /* Adjust the margin as needed */
+          display: inline-block;
+          text-align: right;
+          margin-right: 45px; 
         }
         span.label2 {
-                display: inline-block;
-                text-align: right;
-                margin-right: 52px; /* Adjust the margin as needed */
+          display: inline-block;
+          text-align: right;
+          margin-right: 52px; 
          }
          .tdborder td{
           border-bottom: none;
@@ -74,15 +72,19 @@
           padding-top: -2px;
           padding-bottom: 80px;
          }
-         .caption-top,.caption-bottom {
+         .caption-top{
         text-align: center;
-      
+        padding-bottom: 15px;
+        }
+        li{
+          line-height: 1.3;
         }
     </style>
 </head>
 <body>
     <div class="container">
     <table>
+      <!--Company Details (Fixed elements)-->
         <caption class="caption-top;"style="padding-bottom: 15px; font-size: 25px;"><b>Tax Invoice</b></caption>
         <tr>
           <td rowspan="4" class="Brand">
@@ -100,7 +102,7 @@
             <p class="Brand">
                 Invoice No.<br>
                 <b>
-                    20230705/CIN/315
+                    20230705/CIN/315 <!--315 will get change dynamically-->
                 </b>
             </p>
           </td>
@@ -108,7 +110,7 @@
             <p class="Brand">
             Dated<br>
             <b>
-                18-May-23
+                18-May-23 <!--will get change dynamically-->
             </b>
           </p>
           </td>
@@ -118,7 +120,7 @@
             <p class="Brand">
                 Delivery Note<br>
                 <b>
-                    20230705/CIN/315
+                    20230705/CIN/315 <!--315 will change dynamically-->
                 </b>
             </p>
           </td>
@@ -126,7 +128,7 @@
             <p class="Brand">
                 Mode/Terms of Payment<br>
                 <b>
-                    Razorpay
+                    Razorpay <!--Will get change dynamically-->
                 </b>
             </p>
           </td>
@@ -135,33 +137,35 @@
             <td>
                 <p class="Brand">
                     Reference No. & Date.<br>
-                    <b>1234</b>
+                    <b>
+                      1234 <!--Will get change dynamically-->
+                    </b>
                 </p>
             </td>
             <td>
                 <p class="Brand">
                     Other References<br>
                     <b>
-                      other
+                      other <!--Will get change dynamically-->
                     </b>
                 </p>
             </td>
         </tr>
-        <tr>
+        
 
-        </tr>
-
-<!-- *************************************************** -->
+      <!-- Consignee  Details -->
         <tr>
             <td rowspan="5" class="Brand">
               <p style="font-size: 18px; line-height: 1.2;margin-top: 5px;">
-                Consignee (Ship to)<br>
-                  <b>S Agrawal</b><br>
+                Consignee (Ship to)<br> 
+                  <b>S Agrawal</b><br> <!--will get change dynamically-->
+                 <span><label id="Address"></label>
                   21 A Building<br>
-                  21 Indian Corporation Complex<br>
+                  21 Indian Corporation Complex<br>  <!--will get change dynamically-->
                   Dapoda Bhiwandi -421302<br>
-                  <span class="label1">GSTIN/UIN</span>: 27AAACX2263R1ZR<br>
-                  <span class="label2">State Name</span>: Maharashtra, Code: 27
+                </span>
+                  <span class="label1">GSTIN/UIN</span>: 27AAACX2263R1ZR<br> <!--will get change dynamically-->
+                  <span class="label2">State Name</span>: Maharashtra, Code: 27 <!--will get change dynamically-->
               </p>
             </td>
           </tr>
@@ -170,7 +174,7 @@
               <p class="Brand">
                 Buyer’s Order No.<br>
                   <b>
-                      20230705/CIN/315
+                      20230705/CIN/315 <!--will get change dynamically-->
                   </b>
               </p>
             </td>
@@ -178,7 +182,7 @@
               <p class="Brand">
               Dated<br>
               <b>
-                  18-May-23
+                  18-May-23 <!--will get change dynamically-->
               </b>
             </p>
             </td>
@@ -188,7 +192,7 @@
               <p class="Brand">
                 Dispatch Doc No.<br>
                   <b>
-                      20230705/CIN/315
+                      20230705/CIN/315 <!--will get change dynamically-->
                   </b>
               </p>
             </td>
@@ -196,7 +200,7 @@
               <p class="Brand">
                 Delivery Note Date<br>
                   <b>
-                    18-May-23
+                    18-May-23 <!--will get change dynamically-->
                   </b>
               </p>
             </td>
@@ -206,7 +210,7 @@
                   <p class="Brand">
                     Dispatched through<br>
                     <b>
-                      Delivery
+                      Delivery <!--will get change dynamically-->
                     </b>
                   </p>
               </td>
@@ -214,7 +218,7 @@
                   <p class="Brand">
                     Destination<br>
                     <b>
-                      Nagpur
+                      Nagpur <!--will get change dynamically-->
                     </b>
                   </p>
               </td>
@@ -224,39 +228,57 @@
             <P style=" text-align: left;
             vertical-align: top; margin-top: 5px;">
               Terms of Delivery<br><br>
-              <span style="display: block; width: 300px;">
-                We deliver the product where our third party partner available.<br>
-                Our delivery partner is <b>Delivery</b>.<br>
-                  You can google it if it's available in your area.
+              <span style="display: block;">
+                <ol>
+                  <li>Refund Policy :
+                    <ul >
+                      <li>All payments for plans are non-refundable.</li>
+                      <li> We encourage you to carefully review the plan details and <br>ensure it meets your requirements before making a purchase.</li>
+                    </ul>
+                  </li>
+                  <li>Health Disclaimer :
+                    <ul >
+                      <li>Prior to joining our sessions, we strongly advise that you <br>
+                        consult with your healthcare professional, such as a doctor or<br> 
+                        qualified medical practitioner, regarding any health concerns or <br>
+                        conditions you may have. </li>
+                    </ul>
+                  </li>
+                  <li>
+                    Terms and conditions apply.
+                  </li>
+                </ol>
 
               </span>
             </P>
           </td>
         </tr>
-<!-- ************************************************************** -->
+      <!-- Buyer Details-->
 
         <tr>
           <td class="Brand">
-            <p style="font-size: 18px; line-height: 1.2;margin-top: 5px;">
+            <p style="font-size: 18px; line-height: 1.2;margin-top: 15px; margin-bottom: -50px;">
               Buyer (Bill to)<br>
-                <b>S Agrawal</b><br>
-                21 A Building<br>
-                21 Indian Corporation Complex<br>
-                Dapoda Bhiwandi -421302<br>
-                <span class="label1">GSTIN/UIN</span>: 27AAACX2263R1ZR<br>
-                <span class="label2">State Name</span>: Maharashtra, Code: 27
+                <b>S Agrawal</b><br> <!--will get change dynamically-->
+                <span><label id="Address"></label>
+                  21 A Building<br>
+                  21 Indian Corporation Complex<br>  <!--will get change dynamically-->
+                  Dapoda Bhiwandi -421302<br>
+                </span>
+                  <span class="label1">GSTIN/UIN</span>: 27AAACX2263R1ZR<br> <!--will get change dynamically-->
+                  <span class="label2">State Name</span>: Maharashtra, Code: 27 <!--will get change dynamically-->
             </p>
           </td>
 
         </tr>
 
-<!-- ********************************************************************* -->
+    <!-- Service Description -->
         <tr>
           <td colspan="3" class="tdborder" style="padding: 0;">
               <table style=" width: 100%; border: none;">
                       <tr>
                         <th style="width: 4%;border-left:none">Sr<br>No.</th>
-                        <th style="width: 42%;">Description of<br>Services</th>
+                        <th style="width: 35%;">Description of<br>Services</th>
                         <th>HSN/SAC</th>
                         <th >Quantity</th>
                         <th>Rate</th>
@@ -264,24 +286,24 @@
                         <th style="width: 15%;">Amount</th>
                       </tr>
                       <tr >
-                        <td style="border-left:none;text-align: center; vertical-align:top; padding:22px 0px 15px 0px;" rowspan="6">
+                        <td style="border-left:none;text-align: center; vertical-align:top; padding:22px 0px 15px 0px;" rowspan="3">
                           <b>1</b>
                         </td>
                         <td>
-                          <b>1 YEAR YOGA EVERYDAY</b>
+                          <b>1 YEAR YOGA EVERYDAY</b> <!--will get change dynamically-->
                         </td>
-                        <td rowspan="1">999723</td>
-                        <td>
+                        <td rowspan="1" style="text-align: center;">999723</td>
+                        <td style="text-align: center;">
                           <b>1 NO</b>
                         </td>
-                        <td >2,117.79</td>
-                        <td >NO</td>
+                        <td style="text-align: center;">2,117.79</td>  <!--will get change dynamically-->
+                        <td style="text-align: center;">NO</td>
                         <td style="text-align:right">
-                          <b>2,117.79</b>
+                          <b>2,117.79</b> <!--will get change dynamically-->
                         </td>
                       </tr>
 
-<!-- ****************************************                      -->
+    <!-- Calculations-->
                       <tr class="cgstTd">
                         <td style="text-align:right">
                           <b><i>CGST 9%</i></b>
@@ -291,7 +313,7 @@
                         <td></td>
                         <td></td>
                         <td style="text-align:right">
-                          <b>190.60</b>
+                          <b>190.60</b> <!--will get change dynamically-->
                         </td>
                       </tr>
                       <tr class="sgstTd">
@@ -303,14 +325,26 @@
                         <td></td>
                         <td></td>
                         <td style="text-align:right">
-                          <b>190.60</b>
+                          <b>190.60</b> <!--will get change dynamically-->
                         </td>
+                      </tr>
+                      <tr>
+                        <td style="border-left:none"></td>
+                        <td style="text-align: right; border-bottom:none; border-top:1px solid black ;">
+                          Total</td>
+                        <td></td>
+                        <td style="text-align: center;">
+                          <b>1 NO</b>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td  style="text-align: right;"><b> &#8377; 3999.00</b></td> <!--will get change dynamically-->
                       </tr>
                     </table>
                     </td>
         </tr>
-        
-        <!-- ********************************** -->
+
+        <!-- Black Row of Continued Page -->
       <tr>
         <td colspan="7" style="text-align: right;padding:100px; vertical-align: top;">
         
